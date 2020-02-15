@@ -1,4 +1,4 @@
-import { LOADING_ON } from '../actions/actions';
+import { LOADING_ON, LOADING_OFF } from '../actions/actions';
 import { loadingReducer } from './loadingReducer';
 
 describe('LOADING TEST', () => {
@@ -12,6 +12,19 @@ describe('LOADING TEST', () => {
 
     expect(newState).toEqual({
       loading: true
+    });
+  });
+
+  it('handles tunring loading off', () => {
+    const action = {
+      type: LOADING_OFF
+    };
+
+    const initialState = { loading: true };
+    const newState = loadingReducer(initialState, action);
+
+    expect(newState).toEqual({
+      loading: false
     });
   });
 });
