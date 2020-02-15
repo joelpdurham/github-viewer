@@ -1,14 +1,14 @@
-import { CHANGE_INPUT } from '../actions/actions';
+// import { CHANGE_INPUT } from '../actions/actions';
 
-const initialState = {
+// const initialState = {
+//   searchTerm: ''
+// };
 
-};
+// export const reducer = (state = initialState, action) => {
+//   switch(action.type) {
+//     case CHANGE_INPUT:
+//       return { ...state, searchTerm: action.payload };
+//   }
 
-export const reducer = (state = initialState, action) => {
-  switch(action.type) {
-    case CHANGE_INPUT:
-      return { ...state, searchTerm: action.payload };
-  }
-
-  return state;
-};
+//   return state;
+// };

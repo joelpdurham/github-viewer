@@ -1,12 +1,18 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { changeInput } from '../actions/actions';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 export const Search = () => {
+  const [input, changeInput] = useState('');
   const dispatch = useDispatch();
-  const { searchTerm } = useSelector(state => state);
+
+  const handleSubmit = event => {
+    event.preventDefault();
+  };
 
   return (
-    <input type="text" value={searchTerm} onChange={() => dispatch(changeInput())} />
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={input} onChange={({ target }) => changeInput(target.value)}/>
+      <button>Search</button>
+    </form>
   );
 };
