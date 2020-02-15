@@ -1,13 +1,23 @@
-import { changeInput } from '../actions/actions';
+import { FETCH_USER } from '../actions/actions';
 import { reducer } from './reducer';
 
-describe.skip('REDUCER TEST', () => {
-  it('handle search term change', () => {
-    const action = changeInput('j');
-    const initialState = { searchTerm: '', };
-
+describe('REDUCER TEST', () => {
+  it('handles fetching user info', () => {
+    const action = {
+      type: FETCH_USER,
+      payload: {
+        id: 123,
+        name: 'joelpdurham'
+      }
+    };
+    const initialState = { userInfo: null };
     const newState = reducer(initialState, action);
 
-    expect(newState).toEqual({ searchTerm: 'j' });
+    expect(newState).toEqual({
+      userInfo: {
+        id: 123,
+        name: 'joelpdurham'
+      }
+    });
   });
 });
