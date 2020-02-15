@@ -1,4 +1,4 @@
-import { fetchUserInfoFromState } from "./userSelectors";
+import { fetchUserInfoFromState } from './userSelectors';
 
 describe('SELECTOR TESTS', () => {
   it('return correct info from state', () => {
