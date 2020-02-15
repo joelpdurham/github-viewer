@@ -1,4 +1,5 @@
 import { LOADING_ON } from '../actions/actions';
+import { loadingReducer } from './loadingReducer';
 
 describe('LOADING TEST', () => {
   it('handls turing loading on', () => {
@@ -7,10 +8,10 @@ describe('LOADING TEST', () => {
     };
 
     const initialState = { loading: false };
-    const newState = reducer(initialState, action);
+    const newState = loadingReducer(initialState, action);
 
     expect(newState).toEqual({
-      laoding: true
+      loading: true
     });
   });
 });

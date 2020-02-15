@@ -1,6 +1,7 @@
 import { FETCH_USER } from '../actions/actions';
 import { reducer } from './reducer';
 
+
 describe('REDUCER TEST', () => {
   it('handles fetching user info', () => {
     const action = {
