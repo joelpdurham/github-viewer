@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { fetchUser } from '../actions/actions';
 
 export const Search = () => {
   const [input, changeInput] = useState('');
@@ -7,6 +8,7 @@ export const Search = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
+    dispatch(fetchUser(input));
   };
 
   return (
