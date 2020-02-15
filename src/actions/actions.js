@@ -1,9 +1,12 @@
-// export const CHANGE_INPUT = 'CHANGE_INPUT';
+import { getUser } from '../services/getUser';
 
-// export const changeInput = (input) => {
-//   console.log('Hit Action with this input: ' + input);
-//   return ({
-//     type: CHANGE_INPUT,
-//     payload: input
-//   });
-// };
+export const FETCH_USER = 'FETCH_USER';
+
+export const fetchUser = userName => dispatch => {
+
+  return getUser(userName)
+    .then(user => dispatch({
+      type: FETCH_USER,
+      payload: user
+    }));
+}

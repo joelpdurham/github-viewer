@@ -1,7 +1,7 @@
 import { changeInput } from '../actions/actions';
 import { reducer } from './reducer';
 
-describe('REDUCER TEST', () => {
+describe.skip('REDUCER TEST', () => {
   it('handle search term change', () => {
     const action = changeInput('j');
     const initialState = { searchTerm: '', };
