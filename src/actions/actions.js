@@ -3,12 +3,14 @@ import { turnLoadingOn, turnLoadingOff } from './loadingActions';
 
 export const FETCH_USER = 'FETCH_USER';
 export const FETCH_REPOS = 'FETCH_REPOS';
+export const RESET_REPOS = 'RESET_REPOS';
 
 export const fetchUser = userName => dispatch => {
   dispatch(turnLoadingOn());
   return getUser(userName)
     .then(user => {
       dispatch(turnLoadingOff());
+      //need to reset state of repos
       return dispatch({
         type: FETCH_USER,
         payload: user

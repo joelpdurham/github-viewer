@@ -1,7 +1,8 @@
-import { FETCH_USER, FETCH_REPOS } from '../actions/actions';
+import { FETCH_USER, FETCH_REPOS, RESET_REPOS } from '../actions/actions';
 
 const initialState = {
-  userInfo : null
+  userInfo : null,
+  repos: null
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -10,6 +11,8 @@ export const userReducer = (state = initialState, action) => {
       return { ...state, userInfo: action.payload };
     case FETCH_REPOS:
       return { ...state, repos: action.payload };
+    case RESET_REPOS:
+      return { ...state, repos: null };
     default: 
       return state;
   }

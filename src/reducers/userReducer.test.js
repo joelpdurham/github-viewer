@@ -1,4 +1,4 @@
-import { FETCH_USER, FETCH_REPOS } from '../actions/actions';
+import { FETCH_USER, FETCH_REPOS, RESET_REPOS } from '../actions/actions';
 import { userReducer } from './userReducer';
 
 
@@ -42,6 +42,25 @@ describe('REDUCER TEST', () => {
           name: 'artist-search'
         }
       ]
-    })
+    });
+  });
+
+  it('can reset repos', () => {
+    const action = {
+      type: RESET_REPOS,
+    };
+
+    const initialState = { 
+      repos: [{
+        id: 123,
+        name: 'artist-search'
+      }]
+    };
+
+    const newState = userReducer(initialState, action);
+
+    expect(newState).toEqual({
+      repos: null
+    });
   });
 });
