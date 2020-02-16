@@ -1,5 +1,5 @@
-export const getUser = searchTerm => {
-  return fetch(`https://api.github.com/users/${searchTerm}`)
+export const getUser = userName => {
+  return fetch(`https://api.github.com/users/${userName}`)
     .then(res => res.json());
 };
 
