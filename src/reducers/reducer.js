@@ -1,10 +1,7 @@
 import { FETCH_USER } from '../actions/actions';
 
 const initialState = {
-  userInfo : {
-    id: '',
-    name: ''
-  }
+  userInfo : null
 };
 
 export const reducer = (state = initialState, action) => {

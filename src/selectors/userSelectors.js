@@ -1,1 +1,1 @@
-export const fetchUserInfoFromState = state => state.userInfo;
+export const fetchUserInfoFromState = state => state.reducer.userInfo;

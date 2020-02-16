@@ -1,12 +1,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { fetchUserInfoFromState } from '../selectors/userSelectors';
+import { Loading } from './Loading';
 
 export const User = () => {
   const user = useSelector(fetchUserInfoFromState);
+  const { loading } = useSelector(state => state.loadingReducer);
 
-  return (
-    <>
+  if(loading) return <Loading />;
+
+  const render = user ? 
+    (<>
       <h1>{user.name}</h1>
       <img src={user.avatar_url} />
       <a href={user.html_url} target='blank' >Visit</a>
@@ -14,6 +18,11 @@ export const User = () => {
       <p>{user.bio}</p>
       <p>Following: {user.following}</p>
       <p>Followers: {user.followers}</p>
+    </>) : <img src='https://techcrunch.com/wp-content/uploads/2010/07/github-logo.png?w=512' />;
+
+  return (
+    <>
+      {render}
     </>
   );
 };
