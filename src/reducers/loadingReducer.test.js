@@ -27,4 +27,11 @@ describe('LOADING TEST', () => {
       loading: false
     });
   });
+
+  it('can handle un recognized action', () => {
+    const action = { type: 'POOP' };
+    const initialState = { loading: true };
+    const newState = loadingReducer(initialState, action);
+    expect(newState).toEqual({ loading: true });
+  })
 });

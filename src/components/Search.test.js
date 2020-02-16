@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import { Search } from './Search';
 import { Provider } from 'react-redux';
 import store from '../store';
 
-describe('APP SNAPSHOT ', () => {
-  it('renders App', () => {
-    const wrapper = shallow(<Provider store={store}><App /></Provider>);
+describe('SEARCH SNAPSHOT ', () => {
+  it('renders Search', () => {
+    const wrapper = shallow(<Provider store={store}><Search /></Provider>);
     expect(wrapper).toMatchSnapshot();
   });
 });

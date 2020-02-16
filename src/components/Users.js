@@ -6,7 +6,14 @@ import { useFetchRepos } from '../hooks/useFetchRepos';
 export const User = () => {
   const user = useSelector(toGetUser);
   const repoView = useSelector(toGetRepoView);
-  const { showRepos, hideRepos, repoElements } = useFetchRepos();
+  const { showRepos, hideRepos, repos } = useFetchRepos();
+
+  const repoElements = repos ? repos.map(repo => (
+    <li key={repo.id}>
+      <h3>{repo.name}</h3>
+      <p>{repo.description}</p>
+    </li>
+  )) : (<></>);
 
   const renderRepos = repoView ? (
     <ul>

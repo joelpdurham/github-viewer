@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRepos, turnRepoViewOn, turnRepoViewOff } from '../actions/actions';
 import { toGetUser, toGetRepos } from '../selectors/userSelectors';
@@ -17,12 +16,5 @@ export const useFetchRepos = () => {
     dispatch(turnRepoViewOff());
   };
 
-  const repoElements = repos ? repos.map(repo => (
-    <li key={repo.id}>
-      <h3>{repo.name}</h3>
-      <p>{repo.description}</p>
-    </li>
-  )) : (<></>);
-
-  return { showRepos, hideRepos, repoElements, repos };
+  return { showRepos, hideRepos, repos };
 };

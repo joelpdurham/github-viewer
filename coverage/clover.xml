@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1581894062545" clover="3.2.0">
-  <project timestamp="1581894062545" name="All files">
-    <metrics statements="81" coveredstatements="48" conditionals="21" coveredconditionals="8" methods="31" coveredmethods="14" elements="133" coveredelements="70" complexity="0" loc="81" ncloc="81" packages="6" files="12" classes="12"/>
-    <package name="actions">
+<coverage generated="1581895738232" clover="3.2.0">
+  <project timestamp="1581895738232" name="All files">
+    <metrics statements="82" coveredstatements="51" conditionals="23" coveredconditionals="13" methods="31" coveredmethods="15" elements="136" coveredelements="79" complexity="0" loc="82" ncloc="82" packages="7" files="14" classes="14"/>
+    <package name="src">
+      <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+      <file name="store.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/store.js">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+        <line num="5" count="3" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="src.actions">
       <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
       <file name="actions.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/actions/actions.js">
         <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
@@ -28,14 +35,14 @@
       </file>
       <file name="loadingActions.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/actions/loadingActions.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="2" count="4" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
       </file>
     </package>
-    <package name="components">
-      <metrics statements="14" coveredstatements="3" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
+    <package name="src.components">
+      <metrics statements="16" coveredstatements="3" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="0"/>
       <file name="App.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/components/App.js">
         <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
@@ -43,46 +50,46 @@
       </file>
       <file name="Loading.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/components/Loading.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
       </file>
       <file name="Search.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/components/Search.js">
         <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
       </file>
       <file name="Users.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/components/Users.js">
-        <metrics statements="7" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="9" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="45" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="52" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="hooks">
-      <metrics statements="19" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+    <package name="src.hooks">
+      <metrics statements="17" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="1"/>
       <file name="useFetchRepos.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/hooks/useFetchRepos.js">
-        <metrics statements="12" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="10" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="13" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
       </file>
       <file name="useFetchUser.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/hooks/useFetchUser.js">
         <metrics statements="7" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -91,48 +98,51 @@
         <line num="14" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="reducers">
-      <metrics statements="15" coveredstatements="14" conditionals="11" coveredconditionals="8" methods="2" coveredmethods="2"/>
+    <package name="src.reducers">
+      <metrics statements="15" coveredstatements="15" conditionals="11" coveredconditionals="11" methods="2" coveredmethods="2"/>
+      <file name="index.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/reducers/index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
       <file name="loadingReducer.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/reducers/loadingReducer.js">
-        <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="7" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="8" count="2" type="cond" truecount="2" falsecount="1"/>
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="7" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="12" type="cond" truecount="3" falsecount="0"/>
         <line num="10" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
       </file>
       <file name="userReducer.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/reducers/userReducer.js">
-        <metrics statements="9" coveredstatements="9" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="9" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="10" count="6" type="cond" truecount="6" falsecount="0"/>
+        <metrics statements="9" coveredstatements="9" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="15" type="cond" truecount="6" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="22" count="10" type="stmt"/>
       </file>
     </package>
-    <package name="selectors">
+    <package name="src.selectors">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
       <file name="userSelectors.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/selectors/userSelectors.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="services">
+    <package name="src.services">
       <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="getUser.js" path="/Users/joelpatrickdurham/alchemy/career-track/week-08/github-viewer/src/services/getUser.js">
         <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="5" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
       </file>

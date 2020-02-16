@@ -17,7 +17,7 @@
   },
   "scripts": {
     "test": "jest --verbose --coverage",
-    "test:watch": "npm run test -- --watchAll",
+    "test:watch": "npm run test -- --watchAll --updateSnapshot",
     "start": "webpack-dev-server --hot --mode development --devtool eval-source-map",
     "build": "webpack -p --devtool source-map"
   },
