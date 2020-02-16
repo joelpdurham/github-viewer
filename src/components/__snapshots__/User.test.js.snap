@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`APP SNAPSHOT  renders App 1`] = `
+exports[`USER SNAPSHOT  renders Users 1`] = `
 <ContextProvider
   value={
     Object {
@@ -30,6 +30,6 @@ exports[`APP SNAPSHOT  renders App 1`] = `
     }
   }
 >
-  <App />
+  <User />
 </ContextProvider>
 `;
