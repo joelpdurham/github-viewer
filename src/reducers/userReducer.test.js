@@ -1,5 +1,6 @@
-import { FETCH_USER } from '../actions/actions';
+import { FETCH_USER, FETCH_REPOS } from '../actions/actions';
 import { userReducer } from './userReducer';
+import { useReducer } from 'react';
 
 
 describe('REDUCER TEST', () => {
@@ -20,5 +21,28 @@ describe('REDUCER TEST', () => {
         name: 'joelpdurham'
       }
     });
+  });
+
+  it('can handle fetching user repos', () => {
+    const action = {
+      type: FETCH_REPOS,
+      payload: [
+        {
+          id: 123,
+          name: 'artist-search'
+        }
+      ]
+    };
+    const initialState = { repos: null };
+    const newState = useReducer(initialState, action);
+
+    expect(newState).toEqual({
+      repos: [
+        {
+          id: 123,
+          name: 'artist-search'
+        }
+      ]
+    })
   });
 });
