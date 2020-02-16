@@ -1,8 +1,9 @@
-import { FETCH_USER, FETCH_REPOS, RESET_REPOS } from '../actions/actions';
+import { FETCH_USER, FETCH_REPOS, RESET_REPOS, REPOVIEW_ON, REPOVIEW_OFF } from '../actions/actions';
 
 const initialState = {
   userInfo : null,
-  repos: null
+  repos: null,
+  repoView: false
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -13,6 +14,10 @@ export const userReducer = (state = initialState, action) => {
       return { ...state, repos: action.payload };
     case RESET_REPOS:
       return { ...state, repos: null };
+    case REPOVIEW_ON:
+      return { ...state, repoView: true };
+    case REPOVIEW_OFF:
+      return { ...state, repoView: false };
     default: 
       return state;
   }

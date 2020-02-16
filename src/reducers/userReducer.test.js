@@ -1,4 +1,4 @@
-import { FETCH_USER, FETCH_REPOS, RESET_REPOS } from '../actions/actions';
+import { FETCH_USER, FETCH_REPOS, RESET_REPOS, turnRepoViewOn, turnRepoViewOff } from '../actions/actions';
 import { userReducer } from './userReducer';
 
 
@@ -62,5 +62,23 @@ describe('REDUCER TEST', () => {
     expect(newState).toEqual({
       repos: null
     });
+  });
+
+  it('can turn repo view on', () => {
+    const action = turnRepoViewOn();
+    const initialState = {
+      repoView: false
+    };
+    const newState = userReducer(initialState, action);
+    expect(newState).toEqual({ repoView: true });
+  });
+
+  it('can turn repo view off', () => {
+    const action = turnRepoViewOff();
+    const initialState = {
+      repoView: true
+    };
+    const newState = userReducer(initialState, action);
+    expect(newState).toEqual({ repoView: false });
   });
 });

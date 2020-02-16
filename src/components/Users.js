@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { toGetUser } from '../selectors/userSelectors';
+import { toGetUser, toGetRepoView } from '../selectors/userSelectors';
 import { useFetchRepos } from '../hooks/useFetchRepos';
 
 export const User = () => {
-  const user = useSelector(toGetUser); 
-  const { showRepos, hideRepos, repoElements, repoView } = useFetchRepos();
+  const user = useSelector(toGetUser);
+  const repoView = useSelector(toGetRepoView);
+  const { showRepos, hideRepos, repoElements } = useFetchRepos();
 
   const renderRepos = repoView ? (
     <ul>
