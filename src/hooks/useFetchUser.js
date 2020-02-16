@@ -12,4 +12,4 @@ export const useFetchUser = () => {
   };
 
   return { input, changeInput, handleSubmit };
-}
+};

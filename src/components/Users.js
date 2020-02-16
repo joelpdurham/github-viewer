@@ -1,18 +1,17 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { toGetUser, toGetLoading, toGetRepos } from '../selectors/userSelectors';
+import { toGetUser, toGetLoading } from '../selectors/userSelectors';
 import { Loading } from './Loading';
 import { useFetchRepos } from '../hooks/useFetchRepos';
 
 export const User = () => {
   const user = useSelector(toGetUser);
-  const repos = useSelector(toGetRepos);
   const loading = useSelector(toGetLoading);
-  const { handleClick } = useFetchRepos();
+  const { handleClick, repoElements, repos } = useFetchRepos();
 
   if(loading) return <Loading />;
 
-  const renderRepos = repos ? (<h5>We have Repos!</h5>) : (<></>);
+  const renderRepos = repos ? (<ul>{repoElements}</ul>) : (<p onClick={handleClick}>Click to see Repos</p>);
 
   const render = user ? (
     <>
@@ -22,7 +21,7 @@ export const User = () => {
       <p>Location: {user.location}</p>
       <p>Following: {user.following}</p>
       <p>Followers: {user.followers}</p>
-      <p onClick={handleClick}>Repos: {user.public_repos}</p>
+      <p>Repos: {user.public_repos}</p>
       {renderRepos}
     </>) : (
     <>
