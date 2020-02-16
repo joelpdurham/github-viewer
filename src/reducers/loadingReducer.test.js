@@ -1,4 +1,4 @@
-import { LOADING_ON, LOADING_OFF } from '../actions/actions';
+import { LOADING_ON, LOADING_OFF } from '../actions/loadingActions';
 import { loadingReducer } from './loadingReducer';
 
 describe('LOADING TEST', () => {

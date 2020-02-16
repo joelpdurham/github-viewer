@@ -1,9 +1,9 @@
-import { fetchUserInfoFromState } from './userSelectors';
+import { toGetUser, toGetLoading } from './userSelectors';
 
 describe('SELECTOR TESTS', () => {
-  it('return correct info from state', () => {
+  it('return correct user info from state', () => {
     const state = {
-      reducer: {
+      userReducer: {
         userInfo: {
           name: 'joel',
           id: 1234
@@ -11,9 +11,20 @@ describe('SELECTOR TESTS', () => {
       }
     };
 
-    expect(fetchUserInfoFromState(state)).toEqual({
+    expect(toGetUser(state)).toEqual({
       name: 'joel',
       id: 1234
     });
   });
+
+  it('return correct loading info from state', () => {
+    const state = {
+      loadingReducer: {
+        loading: false
+      }
+    };
+
+    expect(toGetLoading(state)).toEqual(false);
+  });
 });
+

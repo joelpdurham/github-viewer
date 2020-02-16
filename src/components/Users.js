@@ -1,11 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { fetchUserInfoFromState } from '../selectors/userSelectors';
+import { toGetUser, toGetLoading } from '../selectors/userSelectors';
 import { Loading } from './Loading';
 
 export const User = () => {
-  const user = useSelector(fetchUserInfoFromState);
-  const { loading } = useSelector(state => state.loadingReducer);
+  const user = useSelector(toGetUser);
+  const loading = useSelector(toGetLoading);
 
   if(loading) return <Loading />;
 

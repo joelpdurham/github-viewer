@@ -1,5 +1,5 @@
 import { FETCH_USER } from '../actions/actions';
-import { reducer } from './reducer';
+import { userReducer } from './userReducer';
 
 
 describe('REDUCER TEST', () => {
@@ -12,7 +12,7 @@ describe('REDUCER TEST', () => {
       }
     };
     const initialState = { userInfo: null };
-    const newState = reducer(initialState, action);
+    const newState = userReducer(initialState, action);
 
     expect(newState).toEqual({
       userInfo: {

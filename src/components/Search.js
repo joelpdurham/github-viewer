@@ -1,15 +1,8 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { fetchUser } from '../actions/actions';
+import React from 'react';
+import { useFetchUser } from '../hooks/useFetchUser';
 
 export const Search = () => {
-  const [input, changeInput] = useState('');
-  const dispatch = useDispatch();
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    dispatch(fetchUser(input));
-  };
+  const { input, changeInput, handleSubmit } = useFetchUser();
 
   return (
     <form onSubmit={handleSubmit}>

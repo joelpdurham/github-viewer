@@ -4,7 +4,7 @@ const initialState = {
   userInfo : null
 };
 
-export const reducer = (state = initialState, action) => {
+export const userReducer = (state = initialState, action) => {
   switch(action.type) {
     case FETCH_USER:
       return { ...state, userInfo: action.payload };
