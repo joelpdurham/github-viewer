@@ -1,6 +1,6 @@
 import React from 'react';
 import { Search } from '../components/Search';
-import { User } from './Users';
+import { User } from './User';
 import { Loading } from './Loading';
 import { useSelector } from 'react-redux';
 import { toGetLoading } from '../selectors/userSelectors';

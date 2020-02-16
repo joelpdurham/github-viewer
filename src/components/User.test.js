@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from '../store';
 
 describe('USER SNAPSHOT ', () => {
-  it('renders User', () => {
+  it('renders Users', () => {
     const wrapper = shallow(<Provider store={store}><User /></Provider>);
     expect(wrapper).toMatchSnapshot();
   });
