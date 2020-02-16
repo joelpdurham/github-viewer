@@ -1,6 +1,5 @@
 import { FETCH_USER, FETCH_REPOS } from '../actions/actions';
 import { userReducer } from './userReducer';
-import { useReducer } from 'react';
 
 
 describe('REDUCER TEST', () => {
@@ -34,7 +33,7 @@ describe('REDUCER TEST', () => {
       ]
     };
     const initialState = { repos: null };
-    const newState = useReducer(initialState, action);
+    const newState = userReducer(initialState, action);
 
     expect(newState).toEqual({
       repos: [
