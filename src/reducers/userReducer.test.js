@@ -81,4 +81,11 @@ describe('REDUCER TEST', () => {
     const newState = userReducer(initialState, action);
     expect(newState).toEqual({ repoView: false });
   });
+
+  it('can handle an action it doesnt like', () => {
+    const action = { type: 'POOP' };
+    const initialState = { userInfo: 'Joel' };
+    const newState = userReducer(initialState, action);
+    expect(newState).toEqual({ userInfo: 'Joel' });
+  })
 });
