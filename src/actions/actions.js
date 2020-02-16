@@ -1,4 +1,4 @@
-import { getUser } from '../services/getUser';
+import { getUser, getRepos } from '../services/getUser';
 import { turnLoadingOn, turnLoadingOff } from './loadingActions';
 
 export const FETCH_USER = 'FETCH_USER';
@@ -12,6 +12,18 @@ export const fetchUser = userName => dispatch => {
       return dispatch({
         type: FETCH_USER,
         payload: user
+      });
+    });
+};
+
+export const fetchRepos = userName => dispatch => {
+  dispatch(turnLoadingOn());
+  return getRepos(userName)
+    .then(repos => {
+      dispatch(turnLoadingOff());
+      return dispatch({
+        type: FETCH_REPOS,
+        payload: repos
       });
     });
 };
